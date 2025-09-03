@@ -52,6 +52,11 @@ jobs:
           name: lv3-final-mission
           path: ./downloaded-artifact
 
+      - name: Ensure target directory exists
+        run: |
+          sudo mkdir -p /home/ubuntu/app
+          sudo chown ubuntu:ubuntu /home/ubuntu/app
+          
       - name: Get JAR file name
         id: get_jar_name
         run: |
