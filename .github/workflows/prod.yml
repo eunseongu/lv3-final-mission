@@ -41,7 +41,7 @@ jobs:
 
   deploy:
     needs: build_and_test
-    runs-on: self-hosted, lv3-final-mission-prod
+    runs-on: [self-hosted, lv3-final-mission-prod]
     environment: production
     if: github.event_name == 'push'
 
